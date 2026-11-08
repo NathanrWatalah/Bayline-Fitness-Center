@@ -1,0 +1,201 @@
+/* Bayline Fitness Center - styles.css */
+/* This is the main stylesheet for the Bayline Fitness Center website, which defines the visual appearance and layout of the pages. */
+:root { --navy: #122B45; --mint: #4FD2AD; --light: #f1f8f6; } /* CSS variables for color scheme: navy, mint, and light */
+* { box-sizing: border-box; }/* Apply border-box sizing to all elements for consistent layout */
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #1b2733; }/* Set default body styles: no margin, font family, line height, and text color */
+
+/* header and navigation (Flexbox) */
+header { background: var(--navy); padding: 12px 20px; border-bottom: 4px solid var(--mint); }/* Set header styles: background color, padding, and bottom border */
+.brand { color: #fff; font-size: 1.3rem; font-weight: bold; margin-right: auto; margin-left: 14px; }/* Set brand styles: text color, font size, font weight, and margins */
+.bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }/* Set bar styles: flex container, space between items, center alignment, wrap, and gap */
+.bar img { height: 44px; }
+nav ul { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }/* Set navigation list styles: flex container, gap between items, no list style, no margin, and no padding */
+nav a { display: block; color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 20px; }/* Set navigation link styles: block display, text color, no text decoration, padding, and border radius */
+nav a:hover, nav a:focus, nav a.active { background: var(--mint); color: var(--navy); outline: none; }/* Set navigation link hover, focus, and active styles: background color, text color, and no outline */
+
+main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+h2 { color: var(--navy); margin-top: 32px; }
+h2 + p { margin-top: 0; }  /* adjacent sibling combinator */
+
+#hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; background: var(--navy); color: #fff; padding: 36px 28px; border-radius: 16px; margin: 10px 0 20px; }/* Set hero section styles: grid layout, background color, text color, padding, border radius, and margin */
+#hero img { width: 100%; height: auto; border-radius: 12px; }/* Set hero image styles: full width, auto height, and border radius */
+#hero h1 { margin: 0 0 8px; font-size: 2.2rem; }/* Set hero heading styles: no margin, bottom margin, and font size */
+#hero h1 + p { color: var(--mint); font-size: 1.15rem; }/* adjacent sibling combinator */
+
+.btn { display: inline-block; background: var(--mint); color: var(--navy); border: 2px solid var(--mint); padding: 10px 18px; border-radius: 8px; font: bold 1rem Arial, sans-serif; text-decoration: none; cursor: pointer; }
+.btn:hover, .btn:focus { background: var(--navy); color: var(--mint); outline: 3px solid var(--mint); outline-offset: 2px; }
+
+/* studio feature (Grid) */
+.studio-feature {
+  display: grid;/* Set studio feature styles: grid container */
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);/* Define two columns with flexible widths */
+  align-items: center;/* Align items vertically in the center */
+  gap: 28px;/* Set gap between grid items */
+  margin: 32px 0;/* Set margin around the studio feature section */
+  padding: 22px;/* Set padding inside the studio feature section */
+  background: var(--light);/* Set background color for the studio feature section */
+  border: 1px solid #cfe3de;/* Set border for the studio feature section */
+  border-radius: 16px;/* Set border radius for rounded corners of the studio feature section */
+}
+
+/* studio feature image and heading */
+.studio-feature img {
+  display: block;/* Set studio feature image styles: block display */
+  width: 100%;/* Set studio feature image width to 100% of its container */
+  max-width: 100%;/* Set studio feature image maximum width to 100% of its container */
+  height: 300px;/* Set studio feature image height to 300px */
+  object-fit: cover;/* Set studio feature image object fit to cover, ensuring the image covers the entire area without distortion */
+  object-position: center 30%;/* Set studio feature image object position to center horizontally and 30% vertically */
+  border-radius: 12px;/* Set studio feature image border radius for rounded corners */
+}
+
+/* studio feature heading */
+.studio-feature h2 { margin-top: 0; }/* Set studio feature heading styles: no top margin */
+
+/* cards (Flexbox) */
+.cards { display: flex; flex-wrap: wrap; gap: 16px; }/* Set cards container styles: flex container, wrap items, and gap between items */
+.cards > .card { flex: 1 1 260px; }           /* child combinator */
+.training-programs {
+  display: grid;/* Set training programs container styles: grid container */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.training-programs > .program-card { min-width: 0; }
+.card { background: var(--light); border: 1px solid #cfe3de; border-radius: 12px; padding: 16px; }
+.card img { width: 100%; height: auto; border-radius: 8px; }
+.training-programs .program-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  flex: 0 0 220px;
+  object-fit: cover;
+  object-position: center;
+}
+/* training program card details */
+.wellness-gallery {
+  display: grid;/* Set wellness gallery container styles: grid container */
+  grid-template-columns: repeat(2, minmax(0, 1fr));/* Define two columns with flexible widths */
+  gap: 16px;/* Set gap between grid items */
+}
+
+/* wellness gallery figure and figcaption */
+.wellness-gallery figure {
+  min-width: 0;/* Set minimum width for wellness gallery figure to 0 */
+  margin: 0;/* Set margin for wellness gallery figure to 0 */
+  overflow: hidden;/* Set overflow for wellness gallery figure to hidden to prevent content from overflowing */
+  background: var(--light);/* Set background color for wellness gallery figure */
+  border: 1px solid #cfe3de;/* Set border for wellness gallery figure */
+  border-radius: 12px;/* Set border radius for wellness gallery figure for rounded corners */
+}
+.wellness-gallery img {
+  display: block;/* Set wellness gallery image styles: block display */
+  width: 100%;/* Set wellness gallery image width to 100% of its container */
+  height: auto;/* Set wellness gallery image height to auto to maintain aspect ratio */
+}
+.wellness-gallery figcaption {
+  padding: 10px 14px;/* Set wellness gallery figcaption padding */
+  color: var(--navy);/* Set wellness gallery figcaption text color */
+  font-weight: bold;/* Set wellness gallery figcaption font weight to bold */
+}
+.details { display: none; margin-top: 10px; padding: 10px; background: #fff; border-left: 4px solid var(--mint); }/* Set details box styles: hidden by default, margin, padding, background color, and left border */
+.details.open { display: block; }/* Set details box styles when open: display block */
+
+/* weekly schedule (Grid) */
+.schedule { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }/* Set schedule container styles: grid container, seven equal columns, and gap between items */
+.day { border: 2px solid #cfe3de; border-radius: 10px; padding: 10px; font-size: 0.95rem; }/* Set day box styles: border, border radius, padding, and font size */
+.day h3 { margin: 0 0 6px; color: var(--navy); }/* Set day heading styles: no top margin, bottom margin, and text color */
+.day:hover { border-color: var(--mint); background: var(--light); }
+
+/* form */
+label { display: block; margin-top: 12px; font-weight: bold; }
+input, select, textarea { width: 100%; padding: 10px; border: 1px solid #8fa7a0; border-radius: 6px; font: inherit; }
+input:focus, select:focus, textarea:focus { outline: 3px solid var(--mint); }
+#msg { font-weight: bold; color: #0b6b52; }
+
+footer {
+  background: linear-gradient(135deg, #0f2340 0%, #183a5d 100%);
+  color: #eaf3f9;
+  margin-top: 30px;
+  padding: 36px 20px 20px;
+}
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 24px;
+  align-items: start;
+}
+.footer-brand h3,
+.footer-links h4,
+.footer-hours h4,
+.footer-contact h4 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1.05rem;
+}
+.footer-brand p,
+.footer-links a,
+.footer-hours p,
+.footer-contact p {
+  color: #dfeaf2;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { text-decoration: none; }
+.footer-links a:hover,
+.footer-links a:focus { color: var(--mint); }
+.footer-bottom {
+  max-width: 1000px;
+  margin: 24px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  color: #dfeaf2;
+  font-size: 0.9rem;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .schedule { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .training-programs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  .bar { flex-direction: column; }
+  nav { width: 100%; }
+  nav ul { flex-wrap: wrap; justify-content: center; }
+  nav a { padding: 10px 12px; }
+  main { padding: 16px; }
+  h2 { margin-top: 24px; }
+  .cards > .card { flex-basis: 100%; }
+  .schedule { grid-template-columns: repeat(2, 1fr); }
+  .wellness-gallery { grid-template-columns: 1fr; }
+  .training-programs { grid-template-columns: 1fr; }
+  .training-programs .program-card img { height: auto; aspect-ratio: 4 / 3; }
+  .studio-feature { grid-template-columns: 1fr; gap: 18px; padding: 16px; }
+  .studio-feature img { height: 260px; }
+  .footer-inner { grid-template-columns: 1fr; }
+  #hero { grid-template-columns: 1fr; }
+  .brand { margin: 0; }
+  #hero { padding: 32px 18px; }
+  #hero h1 { font-size: 1.7rem; }
+  .btn { min-height: 44px; }
+}
+
+@media (max-width: 380px) {
+  .schedule { grid-template-columns: 1fr; }
+  nav ul { gap: 4px; }
+  nav a { padding: 8px 10px; }
+  #hero { padding: 24px 16px; }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Bayline Fitness Center</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a href="index.html"><img src="images/logo.svg" alt="Bayline Fitness Center logo: a wave line running through a dumbbell"></a>
+    <span class="brand">Bayline Fitness Center</span>
+    <nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html" class="active">Contact</a></li></ul></nav>
+  </div>
+</header>
+<main><!-- This is the main content section of the page, which contains the contact information and inquiry form. -->
+<h2>Contact Bayline</h2><!-- This is the heading of the contact section, which introduces the purpose of the page. -->
+<p>Visit our studio, book a trial session, or ask about personal training and group classes. We would love to help you start your fitness plan.</p>
+<p><strong>Address:</strong> 18 Bayline Road, Monrovia, Liberia<br><!-- This is the address of Bayline Fitness Center, which provides the location for visitors. -->
+<strong>Phone:</strong> +231 77 555 2024<br>
+<strong>Email:</strong> hello@baylinefitness.com<br>
+<strong>Hours:</strong> Monday–Saturday, 5:30 AM – 9:00 PM; Sunday, 8:00 AM – 4:00 PM</p>
+
+<!-- This is the inquiry form section of the page, which allows users to submit their contact information and message. -->
+<form id="inquiry" action="https://formspree.io/f/mljjkpvo" method="POST">
+  <label for="name">Full name</label>
+  <input type="text" id="name" name="name" required>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+  <label for="interest">Class or service you are interested in</label>
+  <select id="interest" name="interest">
+    <option>Strength Training</option>
+    <option>Cardio HIIT</option>
+    <option>Mobility & Recovery</option>
+    <option>Personal Training</option>
+    <option>Group Fitness</option>
+  </select>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="4"></textarea>
+  <p><button class="btn" type="submit">Send inquiry</button></p>
+</form><!-- The inquiry form section ends here. -->
+</main><!-- The main content section ends here. -->
+<footer><!-- This is the footer section of the page, which contains the brand information, quick links, hours and contact information. -->
+  <div class="footer-inner"><!-- This is the footer inner section of the page, which contains the brand, links, hours and contact information. -->
+    <div class="footer-brand"><!-- This is the footer brand section of the page, which contains the brand name and description. -->
+      <h3>Bayline Fitness Center</h3>
+      <p>Helping people build stronger bodies, healthier routines, and lasting confidence through expert training and community support.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-hours">
+      <h4>Hours</h4>
+      <p>Mon–Sat: 5:30 AM – 9:00 PM<br>Sun: 8:00 AM – 4:00 PM</p>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>18 Bayline Road, Monrovia, Liberia<br>+231 77 555 2024<br>hello@baylinefitness.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Bayline Fitness Center. All rights reserved.</div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
